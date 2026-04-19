@@ -29,324 +29,336 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.pnlMenu = new SiticoneNetFrameworkUI.SiticonePanel();
-            this.siticoneButton1 = new SiticoneNetFrameworkUI.SiticoneButton();
-            this.siticonePictureBox2 = new SiticoneNetFrameworkUI.SiticonePictureBox();
-            this.pnlHeader = new SiticoneNetFrameworkUI.SiticonePanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlContainer = new SiticoneNetFrameworkUI.SiticonePanel();
-            this.pnlMenu.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.parrotButton2 = new ReaLTaiizor.Controls.ParrotButton();
+            this.parrotButton3 = new ReaLTaiizor.Controls.ParrotButton();
+            this.parrotButton4 = new ReaLTaiizor.Controls.ParrotButton();
+            this.parrotButton5 = new ReaLTaiizor.Controls.ParrotButton();
+            this.parrotButton6 = new ReaLTaiizor.Controls.ParrotButton();
+            this.parrotButton7 = new ReaLTaiizor.Controls.ParrotButton();
+            this.parrotButton8 = new ReaLTaiizor.Controls.ParrotButton();
+            this.parrotButton9 = new ReaLTaiizor.Controls.ParrotButton();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlMenu
+            // pnlMain
             // 
-            this.pnlMenu.AcrylicTintColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMenu.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            this.pnlMenu.BorderDashPattern = null;
-            this.pnlMenu.BorderGradientEndColor = System.Drawing.Color.Purple;
-            this.pnlMenu.BorderGradientStartColor = System.Drawing.Color.Blue;
-            this.pnlMenu.BorderThickness = 2F;
-            this.pnlMenu.Controls.Add(this.siticoneButton1);
-            this.pnlMenu.Controls.Add(this.siticonePictureBox2);
-            this.pnlMenu.CornerRadiusBottomLeft = 0F;
-            this.pnlMenu.CornerRadiusBottomRight = 0F;
-            this.pnlMenu.CornerRadiusTopLeft = 0F;
-            this.pnlMenu.CornerRadiusTopRight = 0F;
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.EnableAcrylicEffect = false;
-            this.pnlMenu.EnableMicaEffect = false;
-            this.pnlMenu.EnableRippleEffect = false;
-            this.pnlMenu.FillColor = System.Drawing.Color.LightGray;
-            this.pnlMenu.GradientColors = new System.Drawing.Color[] {
-        System.Drawing.Color.White,
-        System.Drawing.Color.LightGray,
-        System.Drawing.Color.Gray};
-            this.pnlMenu.GradientPositions = new float[] {
-        0F,
-        0.5F,
-        1F};
-            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.PatternStyle = System.Drawing.Drawing2D.HatchStyle.LargeGrid;
-            this.pnlMenu.RippleAlpha = 50;
-            this.pnlMenu.RippleAlphaDecrement = 3;
-            this.pnlMenu.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlMenu.RippleMaxSize = 600F;
-            this.pnlMenu.RippleSpeed = 15F;
-            this.pnlMenu.ShowBorder = true;
-            this.pnlMenu.Size = new System.Drawing.Size(220, 673);
-            this.pnlMenu.TabIndex = 0;
-            this.pnlMenu.TabStop = true;
-            this.pnlMenu.TrackSystemTheme = false;
-            this.pnlMenu.UseBorderGradient = false;
-            this.pnlMenu.UseMultiGradient = false;
-            this.pnlMenu.UsePatternTexture = false;
-            this.pnlMenu.UseRadialGradient = false;
-            // 
-            // siticoneButton1
-            // 
-            this.siticoneButton1.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard" +
-    "";
-            this.siticoneButton1.AccessibleName = "   Quản lý Nhân sự";
-            this.siticoneButton1.AutoSizeBasedOnText = false;
-            this.siticoneButton1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneButton1.BadgeBackColor = System.Drawing.Color.Black;
-            this.siticoneButton1.BadgeFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton1.BadgeValue = 0;
-            this.siticoneButton1.BadgeValueForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(216)))), ((int)(((byte)(220)))));
-            this.siticoneButton1.BorderWidth = 1;
-            this.siticoneButton1.ButtonBackColor = System.Drawing.Color.Silver;
-            this.siticoneButton1.ButtonImage = null;
-            this.siticoneButton1.ButtonTextLeftPadding = 15;
-            this.siticoneButton1.CanBeep = true;
-            this.siticoneButton1.CanGlow = false;
-            this.siticoneButton1.CanShake = true;
-            this.siticoneButton1.ContextMenuStripEx = null;
-            this.siticoneButton1.CornerRadiusBottomLeft = 6;
-            this.siticoneButton1.CornerRadiusBottomRight = 6;
-            this.siticoneButton1.CornerRadiusTopLeft = 6;
-            this.siticoneButton1.CornerRadiusTopRight = 6;
-            this.siticoneButton1.CustomCursor = System.Windows.Forms.Cursors.Default;
-            this.siticoneButton1.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.siticoneButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneButton1.EnableLongPress = false;
-            this.siticoneButton1.EnableRippleEffect = true;
-            this.siticoneButton1.EnableShadow = false;
-            this.siticoneButton1.EnableTextWrapping = false;
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F);
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.siticoneButton1.GlowIntensity = 100;
-            this.siticoneButton1.GlowRadius = 20F;
-            this.siticoneButton1.GradientBackground = false;
-            this.siticoneButton1.GradientColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(227)))), ((int)(((byte)(64)))));
-            this.siticoneButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.siticoneButton1.HintText = null;
-            this.siticoneButton1.HoverBackColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.HoverFontStyle = System.Drawing.FontStyle.Regular;
-            this.siticoneButton1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.siticoneButton1.HoverTransitionDuration = 250;
-            this.siticoneButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.siticoneButton1.ImagePadding = 5;
-            this.siticoneButton1.ImageSize = new System.Drawing.Size(16, 16);
-            this.siticoneButton1.IsRadial = false;
-            this.siticoneButton1.IsReadOnly = false;
-            this.siticoneButton1.IsToggleButton = false;
-            this.siticoneButton1.IsToggled = false;
-            this.siticoneButton1.Location = new System.Drawing.Point(2, 122);
-            this.siticoneButton1.LongPressDurationMS = 1000;
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.NormalFontStyle = System.Drawing.FontStyle.Regular;
-            this.siticoneButton1.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.siticoneButton1.ParticleCount = 15;
-            this.siticoneButton1.PressAnimationScale = 0.97F;
-            this.siticoneButton1.PressedBackColor = System.Drawing.Color.Transparent;
-            this.siticoneButton1.PressedFontStyle = System.Drawing.FontStyle.Regular;
-            this.siticoneButton1.PressTransitionDuration = 150;
-            this.siticoneButton1.ReadOnlyTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.siticoneButton1.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.siticoneButton1.RippleRadiusMultiplier = 0.6F;
-            this.siticoneButton1.ShadowBlur = 5;
-            this.siticoneButton1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.siticoneButton1.ShadowOffset = new System.Drawing.Point(0, 2);
-            this.siticoneButton1.ShakeDuration = 500;
-            this.siticoneButton1.ShakeIntensity = 5;
-            this.siticoneButton1.Size = new System.Drawing.Size(215, 50);
-            this.siticoneButton1.TabIndex = 9;
-            this.siticoneButton1.Text = "   Quản lý Nhân sự";
-            this.siticoneButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.siticoneButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.siticoneButton1.TooltipText = null;
-            this.siticoneButton1.UseAdvancedRendering = true;
-            this.siticoneButton1.UseParticles = false;
-            // 
-            // siticonePictureBox2
-            // 
-            this.siticonePictureBox2.BackColor = System.Drawing.Color.LightGray;
-            this.siticonePictureBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.siticonePictureBox2.BorderWidth = 1;
-            this.siticonePictureBox2.Brightness = 1F;
-            this.siticonePictureBox2.Contrast = 1F;
-            this.siticonePictureBox2.CornerRadius = 15;
-            this.siticonePictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePictureBox2.DraggingSpeed = 3.15F;
-            this.siticonePictureBox2.EnableAsyncLoading = false;
-            this.siticonePictureBox2.EnableCaching = false;
-            this.siticonePictureBox2.EnableDragDrop = false;
-            this.siticonePictureBox2.EnableExtendedImageSources = false;
-            this.siticonePictureBox2.EnableFilters = false;
-            this.siticonePictureBox2.EnableFlipping = false;
-            this.siticonePictureBox2.EnableGlow = true;
-            this.siticonePictureBox2.EnableHighDpiSupport = false;
-            this.siticonePictureBox2.EnableMouseInteraction = false;
-            this.siticonePictureBox2.EnablePlaceholder = false;
-            this.siticonePictureBox2.EnableRotation = false;
-            this.siticonePictureBox2.EnableShadow = false;
-            this.siticonePictureBox2.EnableSlideshow = false;
-            this.siticonePictureBox2.FlipHorizontal = false;
-            this.siticonePictureBox2.FlipVertical = false;
-            this.siticonePictureBox2.Grayscale = false;
-            this.siticonePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox2.Image")));
-            this.siticonePictureBox2.ImageOpacity = 1F;
-            this.siticonePictureBox2.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("siticonePictureBox2.Images")));
-            this.siticonePictureBox2.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            this.siticonePictureBox2.IsCircular = true;
-            this.siticonePictureBox2.Location = new System.Drawing.Point(2, 2);
-            this.siticonePictureBox2.MaintainAspectRatio = true;
-            this.siticonePictureBox2.Name = "siticonePictureBox2";
-            this.siticonePictureBox2.PlaceholderImage = null;
-            this.siticonePictureBox2.RotationAngle = 0F;
-            this.siticonePictureBox2.Saturation = 1F;
-            this.siticonePictureBox2.ShowBorder = true;
-            this.siticonePictureBox2.Size = new System.Drawing.Size(120, 120);
-            this.siticonePictureBox2.SizeMode = SiticoneNetFrameworkUI.Helpers.Enum.SiticonePictureBoxSizeMode.Zoom;
-            this.siticonePictureBox2.TabIndex = 7;
-            this.siticonePictureBox2.Text = "siticonePictureBox2";
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.AcrylicTintColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlHeader.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHeader.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            this.pnlHeader.BorderDashPattern = null;
-            this.pnlHeader.BorderGradientEndColor = System.Drawing.Color.Purple;
-            this.pnlHeader.BorderGradientStartColor = System.Drawing.Color.Blue;
-            this.pnlHeader.BorderThickness = 2F;
-            this.pnlHeader.Controls.Add(this.label2);
-            this.pnlHeader.Controls.Add(this.label1);
-            this.pnlHeader.CornerRadiusBottomLeft = 0F;
-            this.pnlHeader.CornerRadiusBottomRight = 0F;
-            this.pnlHeader.CornerRadiusTopLeft = 0F;
-            this.pnlHeader.CornerRadiusTopRight = 0F;
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.EnableAcrylicEffect = false;
-            this.pnlHeader.EnableMicaEffect = false;
-            this.pnlHeader.EnableRippleEffect = false;
-            this.pnlHeader.FillColor = System.Drawing.Color.White;
-            this.pnlHeader.GradientColors = new System.Drawing.Color[] {
-        System.Drawing.Color.White,
-        System.Drawing.Color.LightGray,
-        System.Drawing.Color.Gray};
-            this.pnlHeader.GradientPositions = new float[] {
-        0F,
-        0.5F,
-        1F};
-            this.pnlHeader.Location = new System.Drawing.Point(220, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.PatternStyle = System.Drawing.Drawing2D.HatchStyle.LargeGrid;
-            this.pnlHeader.RippleAlpha = 50;
-            this.pnlHeader.RippleAlphaDecrement = 3;
-            this.pnlHeader.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlHeader.RippleMaxSize = 600F;
-            this.pnlHeader.RippleSpeed = 15F;
-            this.pnlHeader.ShowBorder = true;
-            this.pnlHeader.Size = new System.Drawing.Size(1042, 60);
-            this.pnlHeader.TabIndex = 1;
-            this.pnlHeader.TabStop = true;
-            this.pnlHeader.TrackSystemTheme = false;
-            this.pnlHeader.UseBorderGradient = false;
-            this.pnlHeader.UseMultiGradient = false;
-            this.pnlHeader.UsePatternTexture = false;
-            this.pnlHeader.UseRadialGradient = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(928, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Xin chào, Admin";
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(260, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1020, 720);
+            this.pnlMain.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1037, 56);
+            this.label1.Size = new System.Drawing.Size(1020, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "HỆ THỐNG QUẢN LÝ PHÒNG KHÁM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlContainer
+            // label2
             // 
-            this.pnlContainer.AcrylicTintColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlContainer.BackColor = System.Drawing.Color.Transparent;
-            this.pnlContainer.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            this.pnlContainer.BorderDashPattern = null;
-            this.pnlContainer.BorderGradientEndColor = System.Drawing.Color.Purple;
-            this.pnlContainer.BorderGradientStartColor = System.Drawing.Color.Blue;
-            this.pnlContainer.BorderThickness = 2F;
-            this.pnlContainer.CornerRadiusBottomLeft = 0F;
-            this.pnlContainer.CornerRadiusBottomRight = 0F;
-            this.pnlContainer.CornerRadiusTopLeft = 0F;
-            this.pnlContainer.CornerRadiusTopRight = 0F;
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.EnableAcrylicEffect = false;
-            this.pnlContainer.EnableMicaEffect = false;
-            this.pnlContainer.EnableRippleEffect = false;
-            this.pnlContainer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.pnlContainer.GradientColors = new System.Drawing.Color[] {
-        System.Drawing.Color.White,
-        System.Drawing.Color.LightGray,
-        System.Drawing.Color.Gray};
-            this.pnlContainer.GradientPositions = new float[] {
-        0F,
-        0.5F,
-        1F};
-            this.pnlContainer.Location = new System.Drawing.Point(220, 60);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.PatternStyle = System.Drawing.Drawing2D.HatchStyle.LargeGrid;
-            this.pnlContainer.RippleAlpha = 50;
-            this.pnlContainer.RippleAlphaDecrement = 3;
-            this.pnlContainer.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlContainer.RippleMaxSize = 600F;
-            this.pnlContainer.RippleSpeed = 15F;
-            this.pnlContainer.ShowBorder = true;
-            this.pnlContainer.Size = new System.Drawing.Size(1042, 613);
-            this.pnlContainer.TabIndex = 2;
-            this.pnlContainer.TabStop = true;
-            this.pnlContainer.TrackSystemTheme = false;
-            this.pnlContainer.UseBorderGradient = false;
-            this.pnlContainer.UseMultiGradient = false;
-            this.pnlContainer.UsePatternTexture = false;
-            this.pnlContainer.UseRadialGradient = false;
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(918, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Xin chào, Admin";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(260, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1020, 60);
+            this.panel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pnlSidebar
+            // 
+            this.pnlSidebar.BackColor = System.Drawing.Color.Navy;
+            this.pnlSidebar.Controls.Add(this.parrotButton9);
+            this.pnlSidebar.Controls.Add(this.parrotButton8);
+            this.pnlSidebar.Controls.Add(this.parrotButton7);
+            this.pnlSidebar.Controls.Add(this.parrotButton6);
+            this.pnlSidebar.Controls.Add(this.parrotButton5);
+            this.pnlSidebar.Controls.Add(this.parrotButton4);
+            this.pnlSidebar.Controls.Add(this.parrotButton3);
+            this.pnlSidebar.Controls.Add(this.parrotButton2);
+            this.pnlSidebar.Controls.Add(this.pictureBox1);
+            this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
+            this.pnlSidebar.Name = "pnlSidebar";
+            this.pnlSidebar.Size = new System.Drawing.Size(260, 720);
+            this.pnlSidebar.TabIndex = 1;
+            // 
+            // parrotButton2
+            // 
+            this.parrotButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton2.ButtonImage = null;
+            this.parrotButton2.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton2.ButtonText = "Quản lý nhân sự";
+            this.parrotButton2.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton2.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton2.CornerRadius = 5;
+            this.parrotButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton2.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton2.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton2.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton2.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton2.Location = new System.Drawing.Point(0, 160);
+            this.parrotButton2.Name = "parrotButton2";
+            this.parrotButton2.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton2.TabIndex = 3;
+            this.parrotButton2.TextColor = System.Drawing.Color.White;
+            this.parrotButton2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton2.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotButton3
+            // 
+            this.parrotButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton3.ButtonImage = null;
+            this.parrotButton3.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton3.ButtonText = "Quản lý nhân sự";
+            this.parrotButton3.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton3.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton3.CornerRadius = 5;
+            this.parrotButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton3.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton3.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton3.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton3.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton3.Location = new System.Drawing.Point(0, 210);
+            this.parrotButton3.Name = "parrotButton3";
+            this.parrotButton3.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton3.TabIndex = 4;
+            this.parrotButton3.TextColor = System.Drawing.Color.White;
+            this.parrotButton3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton3.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotButton4
+            // 
+            this.parrotButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton4.ButtonImage = null;
+            this.parrotButton4.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton4.ButtonText = "Quản lý nhân sự";
+            this.parrotButton4.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton4.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton4.CornerRadius = 5;
+            this.parrotButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton4.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton4.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton4.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton4.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton4.Location = new System.Drawing.Point(0, 260);
+            this.parrotButton4.Name = "parrotButton4";
+            this.parrotButton4.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton4.TabIndex = 5;
+            this.parrotButton4.TextColor = System.Drawing.Color.White;
+            this.parrotButton4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton4.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotButton5
+            // 
+            this.parrotButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton5.ButtonImage = null;
+            this.parrotButton5.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton5.ButtonText = "Quản lý nhân sự";
+            this.parrotButton5.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton5.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton5.CornerRadius = 5;
+            this.parrotButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton5.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton5.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton5.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton5.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton5.Location = new System.Drawing.Point(0, 310);
+            this.parrotButton5.Name = "parrotButton5";
+            this.parrotButton5.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton5.TabIndex = 6;
+            this.parrotButton5.TextColor = System.Drawing.Color.White;
+            this.parrotButton5.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton5.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotButton6
+            // 
+            this.parrotButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton6.ButtonImage = null;
+            this.parrotButton6.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton6.ButtonText = "Quản lý nhân sự";
+            this.parrotButton6.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton6.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton6.CornerRadius = 5;
+            this.parrotButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton6.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton6.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton6.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton6.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton6.Location = new System.Drawing.Point(0, 360);
+            this.parrotButton6.Name = "parrotButton6";
+            this.parrotButton6.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton6.TabIndex = 7;
+            this.parrotButton6.TextColor = System.Drawing.Color.White;
+            this.parrotButton6.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton6.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotButton7
+            // 
+            this.parrotButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton7.ButtonImage = null;
+            this.parrotButton7.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton7.ButtonText = "Quản lý nhân sự";
+            this.parrotButton7.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton7.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton7.CornerRadius = 5;
+            this.parrotButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton7.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton7.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton7.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton7.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton7.Location = new System.Drawing.Point(0, 410);
+            this.parrotButton7.Name = "parrotButton7";
+            this.parrotButton7.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton7.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton7.TabIndex = 8;
+            this.parrotButton7.TextColor = System.Drawing.Color.White;
+            this.parrotButton7.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton7.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotButton8
+            // 
+            this.parrotButton8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton8.ButtonImage = null;
+            this.parrotButton8.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton8.ButtonText = "Quản lý nhân sự";
+            this.parrotButton8.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton8.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton8.CornerRadius = 5;
+            this.parrotButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton8.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton8.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton8.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton8.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton8.Location = new System.Drawing.Point(0, 460);
+            this.parrotButton8.Name = "parrotButton8";
+            this.parrotButton8.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton8.TabIndex = 9;
+            this.parrotButton8.TextColor = System.Drawing.Color.White;
+            this.parrotButton8.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton8.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotButton9
+            // 
+            this.parrotButton9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parrotButton9.ButtonImage = null;
+            this.parrotButton9.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.parrotButton9.ButtonText = "Quản lý nhân sự";
+            this.parrotButton9.ClickBackColor = System.Drawing.Color.Gray;
+            this.parrotButton9.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.parrotButton9.CornerRadius = 5;
+            this.parrotButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parrotButton9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parrotButton9.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton9.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton9.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton9.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton9.Location = new System.Drawing.Point(0, 510);
+            this.parrotButton9.Name = "parrotButton9";
+            this.parrotButton9.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton9.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton9.TabIndex = 10;
+            this.parrotButton9.TextColor = System.Drawing.Color.White;
+            this.parrotButton9.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton9.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.pnlContainer);
-            this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.pnlMenu);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMain);
+            this.Controls.Add(this.pnlSidebar);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.pnlMenu.ResumeLayout(false);
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
+            this.Text = "HỆ THỐNG QUẢN LÝ PHÒNG KHÁM";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlSidebar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private SiticoneNetFrameworkUI.SiticonePanel pnlMenu;
-        private SiticoneNetFrameworkUI.SiticonePanel pnlHeader;
-        private SiticoneNetFrameworkUI.SiticonePanel pnlContainer;
+        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private SiticoneNetFrameworkUI.SiticonePictureBox siticonePictureBox2;
-        private SiticoneNetFrameworkUI.SiticoneButton siticoneButton1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlSidebar;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton9;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton8;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton7;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton6;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton5;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton4;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton3;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton2;
     }
 }
 

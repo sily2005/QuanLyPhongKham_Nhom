@@ -35,6 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ucQuanLyNhanSu";
+            this.Size = new System.Drawing.Size(1020, 720);
             this.Load += new System.EventHandler(this.ucQuanLyNhanSu_Load);
             this.ResumeLayout(false);
 
