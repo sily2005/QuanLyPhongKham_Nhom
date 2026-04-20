@@ -97,7 +97,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -112,15 +112,15 @@
             // 
             // pnlSidebar
             // 
-            this.pnlSidebar.BackColor = System.Drawing.Color.Navy;
-            this.pnlSidebar.Controls.Add(this.parrotButton9);
-            this.pnlSidebar.Controls.Add(this.parrotButton8);
-            this.pnlSidebar.Controls.Add(this.parrotButton7);
-            this.pnlSidebar.Controls.Add(this.parrotButton6);
-            this.pnlSidebar.Controls.Add(this.parrotButton5);
-            this.pnlSidebar.Controls.Add(this.parrotButton4);
-            this.pnlSidebar.Controls.Add(this.parrotButton3);
-            this.pnlSidebar.Controls.Add(this.parrotButton2);
+            this.pnlSidebar.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnlSidebar.Controls.Add(this.button7);
+            this.pnlSidebar.Controls.Add(this.button6);
+            this.pnlSidebar.Controls.Add(this.button5);
+            this.pnlSidebar.Controls.Add(this.button4);
+            this.pnlSidebar.Controls.Add(this.button3);
+            this.pnlSidebar.Controls.Add(this.button2);
+            this.pnlSidebar.Controls.Add(this.button1);
+            this.pnlSidebar.Controls.Add(this.cyberButton1);
             this.pnlSidebar.Controls.Add(this.pictureBox1);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
@@ -233,7 +233,7 @@
             this.parrotButton6.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotButton6.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // parrotButton5
+            // button3
             // 
             this.parrotButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.parrotButton5.ButtonImage = null;
@@ -260,7 +260,7 @@
             this.parrotButton5.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // parrotButton4
-            // 
+            this.parrotButton6.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
             this.parrotButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.parrotButton4.ButtonImage = null;
             this.parrotButton4.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
@@ -284,9 +284,9 @@
             this.parrotButton4.TextColor = System.Drawing.Color.White;
             this.parrotButton4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotButton4.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
+            this.parrotButton7.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             // parrotButton3
-            // 
+            this.parrotButton7.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
             this.parrotButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.parrotButton3.ButtonImage = null;
             this.parrotButton3.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
@@ -310,9 +310,9 @@
             this.parrotButton3.TextColor = System.Drawing.Color.White;
             this.parrotButton3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotButton3.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
+            this.parrotButton8.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             // parrotButton2
-            // 
+            this.parrotButton8.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
             this.parrotButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.parrotButton2.ButtonImage = null;
             this.parrotButton2.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
@@ -336,6 +336,17 @@
             this.parrotButton2.TextColor = System.Drawing.Color.White;
             this.parrotButton2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotButton2.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton9.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.parrotButton9.HoverTextColor = System.Drawing.Color.Black;
+            this.parrotButton9.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.parrotButton9.Location = new System.Drawing.Point(0, 510);
+            this.parrotButton9.Name = "parrotButton9";
+            this.parrotButton9.Size = new System.Drawing.Size(260, 50);
+            this.parrotButton9.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotButton9.TabIndex = 10;
+            this.parrotButton9.TextColor = System.Drawing.Color.White;
+            this.parrotButton9.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotButton9.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // frmMain
             // 
@@ -366,14 +377,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlSidebar;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton9;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton8;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton7;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton6;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton5;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton4;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton3;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton2;
+        private ReaLTaiizor.Controls.CyberButton cyberButton1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 

@@ -101,6 +101,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_TiepNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TiepNhan.Designer.cs">
+      <DependentUpon>Form_TiepNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,15 @@
     <Compile Include="ucQuanLyNhanSu.Designer.cs">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucTiepNhanHoSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTiepNhanHoSo.Designer.cs">
+      <DependentUpon>ucTiepNhanHoSo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form_TiepNhan.resx">
+      <DependentUpon>Form_TiepNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLyNhanSu.resx">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTiepNhanHoSo.resx">
+      <DependentUpon>ucTiepNhanHoSo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
