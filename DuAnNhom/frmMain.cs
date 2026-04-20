@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+// Thêm 2 dòng quan trọng này
+using ReaLTaiizor.Forms;
+using ReaLTaiizor.Manager;
 namespace DuAnNhom
 {
     public partial class frmMain : Form
@@ -16,23 +18,21 @@ namespace DuAnNhom
         {
             InitializeComponent();
         }
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            pnlContainer.Controls.Clear();
-            ucQuanLyNhanSu uc = new ucQuanLyNhanSu();
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
+        private void frmMain_Load(object sender, EventArgs e){
         }
-        private void addUC(UserControl uc)
+        private void AddUserControl(UserControl uc)
         {
             uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Clear();
-            pnlContainer.Controls.Add(uc);
+            pnlMain.Controls.Clear(); // Xóa nội dung cũ trong vùng xám
+            pnlMain.Controls.Add(uc); // Đổ nội dung mới vào
             uc.BringToFront();
         }
-        private void btnNhanSu_Click(object sender, EventArgs e)
+
+        // Đây là sự kiện khi bấm nút nhân sự
+        private void btnQuanLyNhanSu_Click(object sender, EventArgs e)
         {
-            addUC(new ucQuanLyNhanSu());
+            ucQuanLyNhanSu ucNhanSu = new ucQuanLyNhanSu();
+            AddUserControl(ucNhanSu);
         }
     }
 }
