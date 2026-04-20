@@ -119,6 +119,12 @@
     <Compile Include="ucQuanLyNhanSu.Designer.cs">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucTiepNhanHoSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTiepNhanHoSo.Designer.cs">
+      <DependentUpon>ucTiepNhanHoSo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form_TiepNhan.resx">
       <DependentUpon>Form_TiepNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +143,9 @@
     </Compile>
     <EmbeddedResource Include="ucQuanLyNhanSu.resx">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTiepNhanHoSo.resx">
+      <DependentUpon>ucTiepNhanHoSo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
