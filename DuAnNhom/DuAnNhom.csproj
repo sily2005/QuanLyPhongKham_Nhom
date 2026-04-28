@@ -55,7 +55,9 @@
     <Reference Include="ReaLTaiizor, Version=3.8.1.8, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ReaLTaiizor.3.8.1.8\lib\net48\ReaLTaiizor.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -111,12 +113,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReaLTaiizor\Colors\ColorScheme.cs" />
     <Compile Include="ReaLTaiizor\Helper\MaterialSkinColorHelper.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="ucQuanLyCaTruc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQuanLyCaTruc.Designer.cs">
+      <DependentUpon>ucQuanLyCaTruc.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucQuanLyNhanSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucQuanLyNhanSu.Designer.cs">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="VaiTro.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +140,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucQuanLyCaTruc.resx">
+      <DependentUpon>ucQuanLyCaTruc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLyNhanSu.resx">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +159,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-04-26 123331.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_ung-vien-vinhphucwork-4_250820-014810.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-04-26 140151.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
