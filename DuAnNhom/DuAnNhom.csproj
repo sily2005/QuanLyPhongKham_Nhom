@@ -123,6 +123,12 @@
     <Compile Include="ucDatLich.Designer.cs">
       <DependentUpon>ucDatLich.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucQuanLyCaTruc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQuanLyCaTruc.Designer.cs">
+      <DependentUpon>ucQuanLyCaTruc.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucQuanLyNhanSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="ucDatLich.resx">
       <DependentUpon>ucDatLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucQuanLyCaTruc.resx">
+      <DependentUpon>ucQuanLyCaTruc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLyNhanSu.resx">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
