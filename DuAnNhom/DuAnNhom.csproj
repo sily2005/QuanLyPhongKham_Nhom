@@ -186,9 +186,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avatar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\avatar-modified.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
