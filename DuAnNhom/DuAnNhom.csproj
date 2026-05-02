@@ -117,8 +117,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReaLTaiizor\Colors\ColorScheme.cs" />
     <Compile Include="ReaLTaiizor\Helper\MaterialSkinColorHelper.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="ucDatLich.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucDatLich.Designer.cs">
       <DependentUpon>ucDatLich.cs</DependentUpon>
@@ -141,6 +142,7 @@
     <Compile Include="ucTiepNhanHoSo.Designer.cs">
       <DependentUpon>ucTiepNhanHoSo.cs</DependentUpon>
     </Compile>
+    <Compile Include="VaiTro.cs" />
     <EmbeddedResource Include="Form_TiepNhan.resx">
       <DependentUpon>Form_TiepNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +184,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar-modified.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

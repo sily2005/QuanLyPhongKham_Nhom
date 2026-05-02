@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace DuAnNhom
 {
-    public partial class ucDatLich : Form
+    public partial class ucDatLich : UserControl
     {
         private readonly string _conStr = @"Server=.;Database=QuanLyPhongKham;Trusted_Connection=True;TrustServerCertificate=True;";
 

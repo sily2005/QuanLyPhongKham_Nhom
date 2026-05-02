@@ -16,9 +16,13 @@ namespace DuAnNhom
         public string ConnectionString { get; set; }
         // Biến lưu ID để biết đang ở chế độ Thêm hay Sửa
         private int idDangChon = -1;
-        public ucQuanLyCaTruc()
+        // Thêm tham số string connStr vào hàm
+        public ucQuanLyCaTruc(string connStr)
         {
             InitializeComponent();
+
+            this.ConnectionString = connStr;
+
             SetPlaceholder(txtPhongKham, "Nhập phòng khám...");
             SetPlaceholder(txtGhiChu, "Nhập ghi chú...");
         }
@@ -26,7 +30,7 @@ namespace DuAnNhom
         {
             DinhDangNgayThang();
 
-            dtpTuNgay.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dtpTuNgay.Value = new DateTime(DateTime.Now.Year, 1, 1);
             dtpDenNgay.Value = DateTime.Now;
 
             LoadComboBoxes();

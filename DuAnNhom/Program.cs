@@ -16,7 +16,7 @@ namespace DuAnNhom
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ucDatLich());
+            Application.Run(new frmMain());
         }
     }
 }
