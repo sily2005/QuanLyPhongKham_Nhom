@@ -114,6 +114,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReaLTaiizor\Colors\ColorScheme.cs" />
     <Compile Include="ReaLTaiizor\Helper\MaterialSkinColorHelper.cs" />
@@ -122,6 +123,12 @@
     </Compile>
     <Compile Include="ucDatLich.Designer.cs">
       <DependentUpon>ucDatLich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDichVu.Designer.cs">
+      <DependentUpon>ucDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="ucQuanLyNhanSu.cs">
       <SubType>UserControl</SubType>
@@ -153,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="ucDatLich.resx">
       <DependentUpon>ucDatLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDichVu.resx">
+      <DependentUpon>ucDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLyNhanSu.resx">
       <DependentUpon>ucQuanLyNhanSu.cs</DependentUpon>
