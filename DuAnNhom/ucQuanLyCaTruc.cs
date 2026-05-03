@@ -14,9 +14,7 @@ namespace DuAnNhom
     public partial class ucQuanLyCaTruc : UserControl
     {
         public string ConnectionString { get; set; }
-        // Biến lưu ID để biết đang ở chế độ Thêm hay Sửa
         private int idDangChon = -1;
-        // Thêm tham số string connStr vào hàm
         public ucQuanLyCaTruc(string connStr)
         {
             InitializeComponent();
@@ -26,9 +24,41 @@ namespace DuAnNhom
             SetPlaceholder(txtPhongKham, "Nhập phòng khám...");
             SetPlaceholder(txtGhiChu, "Nhập ghi chú...");
         }
-        public void LoadDauTien()
+        private void SetPlaceholder(Control txt, string noiDung)
         {
-            DinhDangNgayThang();
+            txt.Text = noiDung;
+            txt.ForeColor = Color.Gray;
+
+            txt.Enter += (s, e) => {
+                if (txt.Text == noiDung)
+                {
+                    txt.Text = "";
+                    txt.ForeColor = Color.Black;
+                }
+            };
+
+            txt.Leave += (s, e) => {
+                if (string.IsNullOrWhiteSpace(txt.Text))
+                {
+                    txt.Text = noiDung;
+                    txt.ForeColor = Color.Gray;
+                }
+            };
+        }
+        public void PhanQuyen(int vaiTro)
+        {
+            if (vaiTro != (int)VaiTro.Admin)
+            {
+                groupBox1.Visible = false; // không phải admin thì ẩn
+            }
+            else
+            {
+                groupBox1.Visible = true;
+            }
+        }
+        public void LoadDauTien(int vaiTro)
+        {
+            PhanQuyen(vaiTro);
 
             dtpTuNgay.Value = new DateTime(DateTime.Now.Year, 1, 1);
             dtpDenNgay.Value = DateTime.Now;
@@ -37,17 +67,15 @@ namespace DuAnNhom
             LoadDataDanhSach();
             ResetGiaoDien();
         }
-
-        private void DinhDangNgayThang()
+        private void ResetGiaoDien()
         {
-            DateTimePicker[] dtps = { dtpNgayLam, dtpTuNgay, dtpDenNgay };
-            foreach (var dtp in dtps)
-            {
-                dtp.Format = DateTimePickerFormat.Custom;
-                dtp.CustomFormat = "dd/MM/yyyy";
-            }
+            idDangChon = -1;
+            btnSua.Enabled = false;
+            btnThemLich.Enabled = true;
+            txtPhongKham.Clear();
+            txtGhiChu.Clear();
+            dtpNgayLam.Value = DateTime.Now;
         }
-
         private void LoadComboBoxes()
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -62,7 +90,7 @@ namespace DuAnNhom
                         NV.TenNhanVien + '-nv' + CAST(NV.MaNhanVien AS VARCHAR) AS TenHienThi
                     FROM NhanVien NV
                     JOIN VaiTro VT ON NV.MaVaiTro = VT.MaVaiTro
-                    WHERE NV.TrangThai = 1 AND VT.TenVaiTro NOT LIKE N'%Quản trị%'";
+                    WHERE NV.TrangThai = 1 AND NV.MaVaiTro <> 1";
 
                     SqlDataAdapter daNV = new SqlDataAdapter(sqlNV, conn);
                     DataTable dtNV = new DataTable();
@@ -80,7 +108,7 @@ namespace DuAnNhom
                     cbCaTruc.DisplayMember = "TenCaTruc";
                     cbCaTruc.ValueMember = "MaCaTruc";
 
-                    // Combobox lọc
+                    // Combobox lọc   //có copy để tạo bản sao khi sửa thì không ảnh hưởng đến nhau 
                     DataTable dtLoc = dtNV.Copy();
                     DataRow r = dtLoc.NewRow();
                     r["MaNhanVien"] = 0;
@@ -97,16 +125,15 @@ namespace DuAnNhom
                 }
             }
         }
-
         public void LoadDataDanhSach()
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
                 string query = @"SELECT 
                                     L.MaLichLam,
-                                    L.MaNhanVien AS [Mã NV],
-                                    L.NgayLam AS [Ngày làm],
+                                    L.MaNhanVien AS [MaNhanVien],
                                     NV.TenNhanVien AS [Nhân viên],
+                                    L.NgayLam AS [Ngày làm],
                                     C.TenCaTruc AS [Ca trực],
                                     L.PhongKham AS [Phòng khám],
                                     L.GhiChu AS [Ghi chú]
@@ -118,7 +145,7 @@ namespace DuAnNhom
                 if (cbLocNhanVien.SelectedValue != null && (int)cbLocNhanVien.SelectedValue > 0)
                     query += " AND L.MaNhanVien = @MaNV";
 
-                query += " ORDER BY L.NgayLam DESC";
+                query += " ORDER BY L.NgayLam DESC"; // sắp xếp theo ngày làm mới nhất lên đầu
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Tu", dtpTuNgay.Value.Date);
@@ -135,45 +162,32 @@ namespace DuAnNhom
                 FormatGrid();
             }
         }
-
         private void FormatGrid()
         {
-            dgvDanhSach.ReadOnly = true;
-            dgvDanhSach.AllowUserToAddRows = false;
-            dgvDanhSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
             if (dgvDanhSach.Columns["MaLichLam"] != null)
                 dgvDanhSach.Columns["MaLichLam"].Visible = false;
-
-            if (dgvDanhSach.Columns["MaNhanVien"] != null)
-                dgvDanhSach.Columns["MaNhanVien"].Visible = false;
 
             if (dgvDanhSach.Columns["Ngày làm"] != null)
                 dgvDanhSach.Columns["Ngày làm"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
             if (dgvDanhSach.Columns["colXoa"] != null)
-                dgvDanhSach.Columns["colXoa"].DisplayIndex = dgvDanhSach.Columns.Count - 1;
-
-            dgvDanhSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvDanhSach.Columns["colXoa"].DisplayIndex = dgvDanhSach.Columns.Count - 1; // colXoa ở cuối vd có 5 cột thì indexcolXoa = 5-1 
         }
-
         private void dgvDanhSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-
             DataGridViewRow row = dgvDanhSach.Rows[e.RowIndex];
             string colName = dgvDanhSach.Columns[e.ColumnIndex].Name;
 
             if (colName == "colXoa")
             {
-                XửLyXoa(row);
+                XuLyXoa(row);
                 return;
             }
+            // row.Cells["MaLichLam"].Value trả về object
+            idDangChon = Convert.ToInt32(row.Cells["MaLichLam"].Value); //Int32 = số nguyên 32-bit (short-16, int-32, long-64)
 
-            idDangChon = Convert.ToInt32(row.Cells["MaLichLam"].Value);
-
-            // 🔥 dùng ID -> không lỗi trùng tên
-            cbNhanVien.SelectedValue = row.Cells["MaNhanVien"].Value;
+            cbNhanVien.SelectedValue = row.Cells["MaNhanVien"].Value;    // 🔥 dùng ID -> không lỗi trùng tên
             cbCaTruc.Text = row.Cells["Ca trực"].Value.ToString();
 
             dtpNgayLam.Value = Convert.ToDateTime(row.Cells["Ngày làm"].Value);
@@ -183,11 +197,9 @@ namespace DuAnNhom
             btnSua.Enabled = true;
             btnThemLich.Enabled = false;
         }
-
-        private void XửLyXoa(DataGridViewRow row)
+        private void XuLyXoa(DataGridViewRow row)
         {
             DateTime ngayTruc = Convert.ToDateTime(row.Cells["Ngày làm"].Value);
-
             if (ngayTruc < DateTime.Now.Date)
             {
                 MessageBox.Show("Không thể xóa ca trực trong quá khứ!");
@@ -203,43 +215,10 @@ namespace DuAnNhom
                     cmd.Parameters.AddWithValue("@id", row.Cells["MaLichLam"].Value);
                     cmd.ExecuteNonQuery();
                 }
-
                 LoadDataDanhSach();
                 ResetGiaoDien();
             }
         }
-
-        private void btnThemLich_Click(object sender, EventArgs e)
-        {
-            ThucThiSQL("INSERT INTO LichLamViec (MaNhanVien, NgayLam, MaCaTruc, PhongKham, GhiChu) VALUES (@MaNV, @Ngay, @MaCa, @Phong, @Ghi)");
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            if (idDangChon == -1) return;
-
-            ThucThiSQL("UPDATE LichLamViec SET MaNhanVien=@MaNV, NgayLam=@Ngay, MaCaTruc=@MaCa, PhongKham=@Phong, GhiChu=@Ghi WHERE MaLichLam=@ID");
-        }
-
-        private bool KiemTraTrungLich(SqlConnection conn)
-        {
-            string sql = @"SELECT COUNT(*) FROM LichLamViec 
-                           WHERE MaNhanVien=@MaNV AND NgayLam=@Ngay AND MaCaTruc=@MaCa";
-
-            if (idDangChon != -1)
-                sql += " AND MaLichLam <> @ID";
-
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@MaNV", cbNhanVien.SelectedValue);
-            cmd.Parameters.AddWithValue("@Ngay", dtpNgayLam.Value.Date);
-            cmd.Parameters.AddWithValue("@MaCa", cbCaTruc.SelectedValue);
-
-            if (idDangChon != -1)
-                cmd.Parameters.AddWithValue("@ID", idDangChon);
-
-            return (int)cmd.ExecuteScalar() > 0;
-        }
-
         private void ThucThiSQL(string sql)
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -288,50 +267,47 @@ namespace DuAnNhom
                 }
             }
         }
+        private bool KiemTraTrungLich(SqlConnection conn)
+        {
+            string sql = @"SELECT COUNT(*) FROM LichLamViec 
+                           WHERE MaNhanVien=@MaNV AND NgayLam=@Ngay AND MaCaTruc=@MaCa";
+            //Nếu đang sửa thì bỏ qua chính nó 
+            if (idDangChon != -1)
+                sql += " AND MaLichLam <> @ID";
 
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@MaNV", cbNhanVien.SelectedValue);
+            cmd.Parameters.AddWithValue("@Ngay", dtpNgayLam.Value.Date);
+            cmd.Parameters.AddWithValue("@MaCa", cbCaTruc.SelectedValue);
+
+            if (idDangChon != -1)
+                cmd.Parameters.AddWithValue("@ID", idDangChon);
+
+            return (int)cmd.ExecuteScalar() > 0;
+        }
+        private void btnThemLich_Click(object sender, EventArgs e)
+        {
+            ThucThiSQL("INSERT INTO LichLamViec (MaNhanVien, NgayLam, MaCaTruc, PhongKham, GhiChu) VALUES (@MaNV, @Ngay, @MaCa, @Phong, @Ghi)");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (idDangChon == -1) return;
+
+            ThucThiSQL("UPDATE LichLamViec SET MaNhanVien=@MaNV, NgayLam=@Ngay, MaCaTruc=@MaCa, PhongKham=@Phong, GhiChu=@Ghi WHERE MaLichLam=@ID");
+        }
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             cbLocNhanVien.SelectedIndex = 0;
-            dtpTuNgay.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dtpTuNgay.Value = new DateTime(DateTime.Now.Year, 1, 1);
             dtpDenNgay.Value = DateTime.Now;
 
             ResetGiaoDien();
             LoadDataDanhSach();
         }
-
-        private void ResetGiaoDien()
-        {
-            idDangChon = -1;
-            btnSua.Enabled = false;
-            btnThemLich.Enabled = true;
-            txtPhongKham.Clear();
-            txtGhiChu.Clear();
-            dtpNgayLam.Value = DateTime.Now;
-        }
         private void btnLoc_Click(object sender, EventArgs e)
         {
             LoadDataDanhSach();
-        }
-        private void SetPlaceholder(Control txt, string noiDung)
-        {
-            txt.Text = noiDung;
-            txt.ForeColor = Color.Gray;
-
-            txt.Enter += (s, e) => {
-                if (txt.Text == noiDung)
-                {
-                    txt.Text = "";
-                    txt.ForeColor = Color.Black;
-                }
-            };
-
-            txt.Leave += (s, e) => {
-                if (string.IsNullOrWhiteSpace(txt.Text))
-                {
-                    txt.Text = noiDung;
-                    txt.ForeColor = Color.Gray;
-                }
-            };
         }
     }
 }

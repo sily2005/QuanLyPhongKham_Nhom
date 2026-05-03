@@ -18,9 +18,8 @@ namespace DuAnNhom
         {
             InitializeComponent();
             // --- THÊM 2 DÒNG NÀY ĐỂ GIẢ LẬP ĐĂNG NHẬP ---
-            Session.TenNhanVien = "Admin (Test)";
-            Session.MaVaiTro = 1; // Giả sử 1 là quyền Admin (Thấy hết menu)
-            // -------------------------------------------
+            Session.TenNhanVien = "Lễ tân (Test)";
+            Session.MaVaiTro = 1; 
             this.Load += frmMain_Load;
         }
 
@@ -29,7 +28,6 @@ namespace DuAnNhom
         // ==========================================
         private void frmMain_Load(object sender, EventArgs e)
         {
-            // Hiển thị tên người dùng lên góc phải (VD: Xin chào admin)
             lblUser.Text = "Xin chào " + Session.TenNhanVien;
 
             PhanQuyen();
@@ -74,7 +72,7 @@ namespace DuAnNhom
             {
                 // Lễ tân: Quản lý bệnh nhân, đặt lịch, tiếp nhận (giấu Quản lý nhân sự)
                 btnQuanLyNhanSu.Visible = false;
-                btnQuanLyCaTruc.Visible = true; // Có thể xem lịch để biết bác sĩ nào trực
+                btnQuanLyCaTruc.Visible = true;
                 btnDatLich.Visible = true;
                 btnTiepNhanHoSo.Visible = true;
             }
@@ -110,7 +108,7 @@ namespace DuAnNhom
                 ucCaTruc = new ucQuanLyCaTruc(Conn);
             }
             AddUserControl(ucCaTruc);
-            ucCaTruc.LoadDauTien();
+            ucCaTruc.LoadDauTien(Session.MaVaiTro);
         }
         private void btnDatLich_Click(object sender, EventArgs e)
         {
